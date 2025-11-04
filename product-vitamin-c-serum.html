@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hand Serum - HB Skincare Heaven</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #f9f9f9;
+        }
+        nav {
+            background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%);
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav li {
+            flex: 1;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 18px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        .product-detail {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .product-container {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .product-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product-info h1 {
+            color: #6a4545;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            color: #8B6F47;
+            font-size: 2em;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        .product-description {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        .features-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            color: #555;
+            font-size: 1.05em;
+        }
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #8B6F47;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .ingredients, .usage {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .ingredients h3, .usage h3 {
+            color: #6a4545;
+            margin-bottom: 15px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .btn-add-cart, .btn-buy-now {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+        .btn-add-cart {
+            background: white;
+            color: #8B6F47;
+            border: 2px solid #8B6F47;
+        }
+        .btn-add-cart:hover {
+            background: #8B6F47;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 111, 71, 0.3);
+        }
+        .btn-buy-now {
+            background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%);
+            color: white;
+        }
+        .btn-buy-now:hover {
+            background: linear-gradient(135deg, #6a4545 0%, #8B6F47 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(139, 111, 71, 0.4);
+        }
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .quantity-selector input {
+            width: 80px;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="order.html">Place Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-detail">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="img/White Green Minimalist New Serum Skincare Beauty Product Instagram Post (1).png" alt="Hand Serum">
+            </div>
+            <div class="product-info">
+                <h1>Hand Serum</h1>
+                <div class="product-price">PKR 2,800</div>
+                <div class="product-description">
+                    <p>Our premium Hand Serum is specially formulated to nourish, repair, and rejuvenate your hands. Enriched with powerful hydrating and brightening ingredients, this serum helps restore softness, reduce dryness, fade age spots, and keep your hands looking youthful and well-cared-for.</p>
+                </div>
+
+                <h3 style="color: #6a4545; margin-top: 30px;">Key Benefits:</h3>
+                <ul class="features-list">
+                    <li>Nourishes and repairs dry, rough hands</li>
+                    <li>Brightens and evens hand skin tone</li>
+                    <li>Reduces dark spots and age spots on hands</li>
+                    <li>Deeply hydrates and softens skin</li>
+                    <li>Strengthens nails and cuticles</li>
+                    <li>Improves skin elasticity and firmness</li>
+                    <li>Protects against environmental damage</li>
+                    <li>Provides anti-aging benefits for hands</li>
+                </ul>
+
+                <div class="ingredients">
+                    <h3>Key Ingredients:</h3>
+                    <p><strong>Vitamin C:</strong> Brightens skin and reduces dark spots on hands.</p>
+                    <p><strong>Hyaluronic Acid:</strong> Provides intense hydration to dry, rough hands.</p>
+                    <p><strong>Shea Butter:</strong> Deeply nourishes and softens hand skin.</p>
+                    <p><strong>Vitamin E:</strong> Protects and repairs damaged skin on hands.</p>
+                    <p><strong>Jojoba Oil:</strong> Mimics natural oils to restore hand moisture.</p>
+                    <p><strong>Retinol:</strong> Helps reduce fine lines and age spots on hands.</p>
+                    <p><strong>Natural Plant Extracts:</strong> Provide additional healing and soothing properties.</p>
+                </div>
+
+                <div class="usage">
+                    <h3>How to Use:</h3>
+                    <p><strong>Step 1:</strong> Wash your hands and pat dry.</p>
+                    <p><strong>Step 2:</strong> Apply a small amount (about a pea-sized) of hand serum to the back of your hands.</p>
+                    <p><strong>Step 3:</strong> Gently massage into hands, fingers, and cuticles in circular motions.</p>
+                    <p><strong>Step 4:</strong> Allow it to absorb for 2-3 minutes before touching anything.</p>
+                    <p><strong>Best Used:</strong> Morning and evening, or after washing hands. For best results, use at night before bed.</p>
+                    <p><strong>Tip:</strong> Apply before wearing gloves for deeper penetration and overnight treatment.</p>
+                </div>
+
+                <div class="quantity-selector">
+                    <label for="quantity" style="color: #6a4545; font-weight: 600;">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                </div>
+
+                <div class="btn-group">
+                    <a href="order.html" class="btn-add-cart">Add to Cart</a>
+                    <a href="order.html" class="btn-buy-now">Buy Now</a>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <p style="margin: 0; color: #2e7d32;"><strong>✓ Restore soft, youthful hands</strong> | <strong>✓ 5 years of expertise</strong> | <strong>✓ Trusted by thousands</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>About Us - HB Skincare Heaven</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
+        nav { background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%); padding: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav ul { list-style-type: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+        nav li { flex: 1; }
+        nav a { display: block; color: white; text-align: center; padding: 18px 20px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border-bottom: 3px solid transparent; }
+        nav a:hover, nav a.active { background-color: rgba(255,255,255,0.1); border-bottom: 3px solid #fff; }
+        .section-title { text-align: center; color: #6a4545; font-size: 2.5em; margin: 50px 0 30px; font-weight: 700; position: relative; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; height: 3px; background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%); }
+        .about-section { padding: 60px 0; background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); }
+        .about-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .about-content p { font-size: 1.1em; color: #555; line-height: 1.8; margin-bottom: 25px; text-align: justify; }
+        .about-content h3 { color: #6a4545; font-size: 1.8em; margin: 40px 0 20px; font-weight: 600; }
+        .about-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin: 40px 0; }
+        .feature-box { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease; }
+        .feature-box:hover { transform: translateY(-5px); }
+        .feature-box .icon { font-size: 3em; margin-bottom: 15px; }
+        .feature-box h5 { color: #6a4545; font-size: 1.2em; margin-bottom: 10px; font-weight: 600; }
+        .feature-box p { color: #666; font-size: 0.95em; text-align: center; margin: 0; }
+        .values-list { list-style: none; padding: 0; margin: 20px 0; }
+        .values-list li { padding: 12px 0 12px 35px; color: #555; font-size: 1.05em; position: relative; border-bottom: 1px solid #eee; }
+        .values-list li:last-child { border-bottom: none; }
+        .values-list li::before { content: "✨"; position: absolute; left: 0; font-size: 1.2em; }
+        footer { background: linear-gradient(135deg, #6a4545 0%, #8B6F47 100%); color: white; padding: 40px 0 20px; margin-top: 60px; }
+        footer h5 { color: white; margin-bottom: 20px; font-weight: 600; }
+        footer p { color: rgba(255,255,255,0.9); margin-bottom: 10px; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; transition: color 0.3s ease; }
+        footer a:hover { color: white; text-decoration: underline; }
+        footer ul { list-style: none; padding: 0; }
+        footer ul li { margin-bottom: 8px; }
+        @media (max-width: 768px) { nav ul { flex-direction: column; } .section-title { font-size: 2em; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="order.html">Place Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>Welcome to <strong>HB Skincare Heaven</strong>, your trusted destination for premium, natural skincare products made with love in Pakistan. We are passionate about helping you achieve healthy, radiant, and naturally glowing skin through carefully crafted formulations that combine nature's finest ingredients with modern skincare science.</p>
+
+            <h3>Our Story</h3>
+            <p>For <strong>over 5 years</strong>, HB Skincare Heaven has been your trusted partner in achieving beautiful, healthy skin. We started with a simple yet powerful belief: everyone deserves access to high-quality, natural skincare products that truly work. Since our founding, we have dedicated ourselves to creating products that are both effective and gentle on the skin, carefully selecting the finest natural ingredients from trusted sources.</p>
+            <p>With <strong>5 years of experience</strong> in the skincare industry, we have built a reputation for excellence, quality, and trust. Thousands of satisfied customers across Pakistan have trusted us with their skincare needs, and we're proud to have helped countless individuals achieve their skin goals. Our journey has been marked by continuous learning, innovation, and an unwavering commitment to customer satisfaction.</p>
+            <p>Our commitment to quality and authenticity drives everything we do. Each product is handcrafted with meticulous attention to detail, ensuring that you receive nothing but the best for your skin. Over the past 5 years, we have refined our formulations, perfected our production processes, and built lasting relationships with our customers. We believe in transparency, which is why we use only natural, safe, and effective ingredients without harsh chemicals or additives.</p>
+
+            <h3>Our Mission</h3>
+            <p>Our mission is to empower individuals to embrace their natural beauty by providing premium skincare solutions that are gentle yet effective. We strive to create products that not only improve your skin's appearance but also boost your confidence and enhance your overall well-being.</p>
+
+            <h3>Our Values</h3>
+            <ul class="values-list">
+                <li><strong>Natural & Safe:</strong> We use only natural, organic ingredients that are safe for all skin types, including sensitive skin.</li>
+                <li><strong>Quality First:</strong> Every product undergoes rigorous testing and quality checks to ensure excellence in every batch.</li>
+                <li><strong>Customer Care:</strong> Your satisfaction and skin health are our top priorities. We're here to support you on your skincare journey.</li>
+                <li><strong>Sustainability:</strong> We are committed to environmentally responsible practices and sustainable sourcing of ingredients.</li>
+                <li><strong>Transparency:</strong> We believe in honesty and transparency about our ingredients, processes, and practices.</li>
+                <li><strong>Innovation:</strong> We continuously research and develop new formulations to bring you the latest in natural skincare science.</li>
+            </ul>
+
+            <h3>Why Choose HB Skincare Heaven?</h3>
+            <div class="about-features">
+                <div class="feature-box"><div class="icon">🌿</div><h5>100% Natural Ingredients</h5><p>Formulated with pure, natural ingredients sourced from trusted suppliers, free from harmful chemicals and parabens.</p></div>
+                <div class="feature-box"><div class="icon">✨</div><h5>Handcrafted Quality</h5><p>Each product is carefully crafted by hand with attention to detail, ensuring consistent quality and effectiveness.</p></div>
+                <div class="feature-box"><div class="icon">🇵🇰</div><h5>Made in Pakistan</h5><p>Proudly made with love in Pakistan, supporting local communities and sustainable practices.</p></div>
+                <div class="feature-box"><div class="icon">💧</div><h5>Hydrating Formulas</h5><p>Our products are specifically designed to provide deep hydration and nourishment for all skin types.</p></div>
+                <div class="feature-box"><div class="icon">🌟</div><h5>Visible Results</h5><p>Experience noticeable improvements in your skin's texture, tone, and overall radiance with regular use.</p></div>
+                <div class="feature-box"><div class="icon">💝</div><h5>Affordable Luxury</h5><p>Premium quality skincare at accessible prices, making healthy skin achievable for everyone.</p></div>
+            </div>
+
+            <h3>Our Product Range</h3>
+            <p>At HB Skincare Heaven, we offer a comprehensive range of skincare products designed to address various skin concerns. From our <strong>Natural Serum</strong> that calms redness and acne while promoting a natural glow, to our <strong>Hydrating Night Cream</strong> that works while you sleep, each product is formulated to deliver visible results.</p>
+            <p>Our <strong>Face Cream</strong> with Hyaluronic Acid provides intense hydration, while our <strong>Hydrating Toner</strong> and <strong>Aqua-Boost Hyaluronic Toner</strong> ensure your skin stays balanced and moisturized throughout the day. For deep nourishment, our <strong>Hydra Mask</strong> offers an intensive treatment that leaves your skin refreshed and glowing.</p>
+
+            <h3>Why You Can Trust Us</h3>
+            <p>With <strong>5 years of proven track record</strong> in the skincare industry, HB Skincare Heaven has earned the trust of thousands of customers. Here's why you can confidently choose us for your skincare needs:</p>
+            <ul class="values-list">
+                <li><strong>5 Years of Excellence:</strong> We've been serving customers with premium skincare products for over 5 years, building a reputation based on quality and results.</li>
+                <li><strong>Thousands of Happy Customers:</strong> Our success is measured by the satisfaction of our customers. Thousands of people have trusted us with their skin and achieved amazing results.</li>
+                <li><strong>Proven Product Formulas:</strong> Every product in our range has been tested and refined over years of use, ensuring effectiveness and safety.</li>
+                <li><strong>Safe & Tested Products:</strong> All our products are carefully tested and formulated with natural ingredients that are safe for all skin types, including sensitive skin.</li>
+                <li><strong>Consistent Quality:</strong> Over 5 years, we've maintained consistent quality standards in every batch, ensuring you get the same great results every time.</li>
+                <li><strong>Trusted by Dermatologists:</strong> Our products are trusted by skincare professionals and recommended for their natural and effective formulations.</li>
+                <li><strong>Money-Back Guarantee:</strong> We're so confident in our products that we offer satisfaction guarantee. If you're not happy, we'll make it right.</li>
+                <li><strong>Transparent Business:</strong> We believe in complete transparency – from ingredient lists to our business practices, you can trust us to be honest and upfront.</li>
+            </ul>
+
+            <h3>Our Product Expertise</h3>
+            <p>Over the past 5 years, we have developed and perfected a comprehensive range of skincare products. Each product in our collection is backed by:</p>
+            <p><strong>Natural Serum:</strong> Our signature serum has been a bestseller for 4 years, helping thousands achieve naturally glowing skin. Formulated with carefully selected botanical extracts, it calms redness, reduces acne, and smooths skin texture. Customers report visible improvements within 2-3 weeks of regular use.</p>
+            <p><strong>Face Cream with Hyaluronic Acid:</strong> This revolutionary formula has been our top-rated product for hydration. With 2% Hyaluronic Acid, it deeply hydrates and plumps the skin. Over 3 years of customer feedback has helped us perfect this formula to work for all skin types.</p>
+            <p><strong>Hydrating Toner Series:</strong> Our toner collection has evolved over 5 years. From our original Hydrating Toner to the advanced Aqua-Boost Hyaluronic Toner, we've created solutions for every hydration need. The 2% Hyaluronic Acid + Panthenol formula is the result of extensive research and customer testing.</p>
+            <p><strong>Hydra Mask:</strong> Our intensive treatment mask has become a weekly skincare ritual for thousands. Developed through years of refinement, it delivers deep hydration and nourishment, leaving skin refreshed and glowing.</p>
+            <p><strong>Hydrating Night Cream:</strong> Our nighttime formula works while you sleep, providing intense hydration and repair. Years of formulation testing ensure optimal absorption and results by morning.</p>
+
+            <h3>Our Commitment to You</h3>
+            <p>When you choose HB Skincare Heaven, you're not just buying a product – you're investing in your skin's health and your confidence. With 5 years of experience, we understand what works and what doesn't. We stand behind every product we create and are dedicated to ensuring your complete satisfaction. Our customer support team, with years of expertise, is always ready to assist you with product recommendations, skincare advice, or any questions you may have.</p>
+            <p>We believe that beautiful, healthy skin is achievable for everyone, and we've proven this over the past 5 years by helping thousands of customers. Thank you for trusting HB Skincare Heaven – where natural beauty meets exceptional quality, backed by years of experience and thousands of satisfied customers.</p>
+
+            <h3>Contact Us</h3>
+            <p>Have questions about our products or need personalized skincare advice? We'd love to hear from you! Feel free to reach out through our contact form, email us at <a href="mailto:support@hbskincare.com" style="color: #8B6F47; text-decoration: none;">support@hbskincare.com</a>, or connect with us on Instagram <strong>@hbskincareheaven</strong>. We're here to help you achieve your skincare goals!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>HB Skincare Heaven</h5>
+                    <p>Glow naturally with our handcrafted skincare products. Made with love in Pakistan 🇵🇰</p>
+                    <p>Premium natural ingredients for healthy, radiant skin.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="order.html">Place Order</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>📧 Email: <a href="mailto:support@hbskincare.com">support@hbskincare.com</a></p>
+                    <p>📱 Phone: <a href="tel:+923001234567">+92 300 1234567</a></p>
+                    <p>📷 Instagram: @hbskincareheaven</p>
+                </div>
+            </div>
+            <hr style="background: rgba(255,255,255,0.3); margin: 30px 0;">
+            <p class="text-center mb-0">&copy; 2025 HB Skincare Heaven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

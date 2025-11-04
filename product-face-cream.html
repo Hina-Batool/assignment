@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Face Cream - HB Skincare Heaven</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #f9f9f9;
+        }
+        nav {
+            background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%);
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav li {
+            flex: 1;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 18px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        .product-detail {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .product-container {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .product-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product-info h1 {
+            color: #6a4545;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            color: #8B6F47;
+            font-size: 2em;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        .product-description {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        .features-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            color: #555;
+            font-size: 1.05em;
+        }
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #8B6F47;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .ingredients, .usage {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .ingredients h3, .usage h3 {
+            color: #6a4545;
+            margin-bottom: 15px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .btn-add-cart, .btn-buy-now {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+        .btn-add-cart {
+            background: white;
+            color: #8B6F47;
+            border: 2px solid #8B6F47;
+        }
+        .btn-add-cart:hover {
+            background: #8B6F47;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 111, 71, 0.3);
+        }
+        .btn-buy-now {
+            background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%);
+            color: white;
+        }
+        .btn-buy-now:hover {
+            background: linear-gradient(135deg, #6a4545 0%, #8B6F47 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(139, 111, 71, 0.4);
+        }
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .quantity-selector input {
+            width: 80px;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="fasle.html#home">Home</a></li>
+            <li><a href="fasle.html#about">About Us</a></li>
+            <li><a href="fasle.html#products">Products</a></li>
+            <li><a href="order.html">Place Order</a></li>
+            <li><a href="fasle.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-detail">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="img/Pink and White Minimalist Beauty Skincare Instagram Post.png" alt="Face Cream">
+            </div>
+            <div class="product-info">
+                <h1>Face Cream with Hyaluronic Acid</h1>
+                <div class="product-price">PKR 2,500</div>
+                <div class="product-description">
+                    <p>This revolutionary formula has been our top-rated product for hydration for over 3 years. With 2% Hyaluronic Acid, it deeply hydrates and plumps the skin, leaving it soft, supple, and radiant.</p>
+                </div>
+
+                <h3 style="color: #6a4545; margin-top: 30px;">Key Benefits:</h3>
+                <ul class="features-list">
+                    <li>Intense hydration with 2% Hyaluronic Acid</li>
+                    <li>Plumps and firms the skin</li>
+                    <li>Nourishes deeply for 24 hours</li>
+                    <li>Soft and supple skin texture</li>
+                    <li>Reduces fine lines and wrinkles</li>
+                    <li>Improves skin elasticity</li>
+                    <li>Non-greasy, fast-absorbing formula</li>
+                    <li>Suitable for all skin types</li>
+                </ul>
+
+                <div class="ingredients">
+                    <h3>Key Ingredients:</h3>
+                    <p><strong>2% Hyaluronic Acid:</strong> Holds up to 1000 times its weight in water, providing intense hydration.</p>
+                    <p><strong>Glycerin:</strong> Attracts and retains moisture in the skin.</p>
+                    <p><strong>Shea Butter:</strong> Rich emollient that nourishes and softens skin.</p>
+                    <p><strong>Vitamin E:</strong> Powerful antioxidant that protects and repairs skin.</p>
+                    <p><strong>Jojoba Oil:</strong> Mimics natural skin oils for balanced hydration.</p>
+                    <p><strong>All Natural:</strong> Free from parabens, sulfates, and synthetic fragrances.</p>
+                </div>
+
+                <div class="usage">
+                    <h3>How to Use:</h3>
+                    <p><strong>Step 1:</strong> Cleanse your face with a gentle cleanser.</p>
+                    <p><strong>Step 2:</strong> Apply a thin layer of cream to your face and neck.</p>
+                    <p><strong>Step 3:</strong> Gently massage in upward motions until fully absorbed.</p>
+                    <p><strong>Step 4:</strong> Use morning and evening for best results.</p>
+                    <p><strong>Tip:</strong> Can be used as a base under makeup or alone.</p>
+                </div>
+
+                <div class="quantity-selector">
+                    <label for="quantity" style="color: #6a4545; font-weight: 600;">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                </div>
+
+                <div class="btn-group">
+                    <a href="order.html" class="btn-add-cart">Add to Cart</a>
+                    <a href="order.html" class="btn-buy-now">Buy Now</a>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <p style="margin: 0; color: #2e7d32;"><strong>✓ Top-rated for 3+ years</strong> | <strong>✓ 5 years of excellence</strong> | <strong>✓ Trusted by thousands</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

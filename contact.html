@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Contact Us - HB Skincare Heaven</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
+        nav { background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%); padding: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav ul { list-style-type: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+        nav li { flex: 1; }
+        nav a { display: block; color: white; text-align: center; padding: 18px 20px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; border-bottom: 3px solid transparent; }
+        nav a:hover, nav a.active { background-color: rgba(255,255,255,0.1); border-bottom: 3px solid #fff; }
+        .section-title { text-align: center; color: #6a4545; font-size: 2.5em; margin: 50px 0 30px; font-weight: 700; position: relative; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; height: 3px; background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%); }
+        .form-section { background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 100%); padding: 60px 0; margin: 40px 0; }
+        .form-container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; margin-bottom: 8px; color: #6a4545; font-weight: 600; font-size: 1em; }
+        .form-group label .required { color: #d32f2f; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; transition: all 0.3s ease; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #8B6F47; box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .btn-submit { background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%); color: white; padding: 15px 50px; border: none; border-radius: 8px; font-size: 1.1em; font-weight: 600; cursor: pointer; width: 100%; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-submit:hover { background: linear-gradient(135deg, #6a4545 0%, #8B6F47 100%); transform: translateY(-2px); box-shadow: 0 5px 20px rgba(139, 111, 71, 0.3); }
+        footer { background: linear-gradient(135deg, #6a4545 0%, #8B6F47 100%); color: white; padding: 40px 0 20px; margin-top: 60px; }
+        footer h5 { color: white; margin-bottom: 20px; font-weight: 600; }
+        footer p { color: rgba(255,255,255,0.9); margin-bottom: 10px; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; transition: color 0.3s ease; }
+        footer a:hover { color: white; text-decoration: underline; }
+        footer ul { list-style: none; padding: 0; }
+        footer ul li { margin-bottom: 8px; }
+        @media (max-width: 768px) { nav ul { flex-direction: column; } .section-title { font-size: 2em; } .form-container { padding: 25px; } .form-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="order.html">Place Order</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="form-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="form-container">
+            <form action="mailto:support@hbskincare.com" method="post" enctype="text/plain">
+                <h3 style="color: #6a4545; margin-bottom: 30px; text-align: center;">Get in Touch</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName">Your Name <span class="required">*</span></label>
+                        <input type="text" id="contactName" name="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email <span class="required">*</span></label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactPhone">Phone Number</label>
+                    <input type="tel" id="contactPhone" name="contactPhone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Product Information">Product Information</option>
+                        <option value="Order Status">Order Status</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" required placeholder="Please write your message here..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+                <p style="text-align: center; margin-top: 15px; color: #666; font-size: 0.9em;">
+                    We'll respond to your message within 24 hours.
+                </p>
+            </form>
+
+            <div style="margin-top: 40px; padding-top: 40px; border-top: 2px solid #e0e0e0;">
+                <h4 style="color: #6a4545; text-align: center; margin-bottom: 25px;">Other Ways to Reach Us</h4>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <h5 style="color: #8B6F47; margin-bottom: 10px;">📧 Email</h5>
+                        <p><a href="mailto:support@hbskincare.com" style="color: #6a4545;">support@hbskincare.com</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 style="color: #8B6F47; margin-bottom: 10px;">📱 Phone</h5>
+                        <p><a href="tel:+923001234567" style="color: #6a4545;">+92 300 1234567</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 style="color: #8B6F47; margin-bottom: 10px;">📷 Instagram</h5>
+                        <p style="color: #6a4545;">@hbskincareheaven</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>HB Skincare Heaven</h5>
+                    <p>Glow naturally with our handcrafted skincare products. Made with love in Pakistan 🇵🇰</p>
+                    <p>Premium natural ingredients for healthy, radiant skin.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="order.html">Place Order</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>📧 Email: <a href="mailto:support@hbskincare.com">support@hbskincare.com</a></p>
+                    <p>📱 Phone: <a href="tel:+923001234567">+92 300 1234567</a></p>
+                    <p>📷 Instagram: @hbskincareheaven</p>
+                </div>
+            </div>
+            <hr style="background: rgba(255,255,255,0.3); margin: 30px 0;">
+            <p class="text-center mb-0">&copy; 2025 HB Skincare Heaven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Home - HB Skincare Heaven</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%);
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            flex: 1;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 18px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: rgba(255,255,255,0.1);
+            border-bottom: 3px solid #fff;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            color: #6a4545;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero-banner p {
+            color: #8B6F47;
+            font-size: 1.2em;
+        }
+
+        .carousel-item img {
+            border-radius: 10px;
+        }
+
+        .container-custom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #6a4545;
+            font-size: 2.5em;
+            margin: 50px 0 30px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%);
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border: 1px solid #f0f0f0;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .product-card img {
+            border-radius: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            height: auto;
+            min-height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            color: #6a4545;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .product-price {
+            color: #8B6F47;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .product-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .product-card ul li {
+            padding: 5px 0;
+            color: #555;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .product-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #8B6F47;
+            font-weight: bold;
+        }
+
+        .latest-section {
+            background: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        .badge-new {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+
+        .product-card {
+            position: relative;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #6a4545 0%, #8B6F47 100%);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="order.html">Place Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section>
+        <div class="hero-banner">
+            <div class="container-custom">
+                <img src="img/Make up Artist Logo.png" alt="HB Skincare Heaven Logo" style="max-width: 200px; margin-bottom: 20px; border-radius: 100%;">
+                <h1>HB Skincare Heaven</h1>
+                <p>Glow Naturally with Premium Handcrafted Skincare Products</p>
+                <p style="font-size: 1em; margin-top: 10px;">Made with Love in Pakistan 🇵🇰</p>
+            </div>
+        </div>
+
+        <!-- Hero Carousel -->
+        <div class="container-custom" style="margin-top: 30px; margin-bottom: 40px;">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/1.png" class="d-block w-100" alt="HB Skincare">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/2.png" class="d-block w-100" alt="HB Skincare">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/6.png" class="d-block w-100" alt="HB Skincare">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Products Section -->
+    <section class="latest-section">
+        <h2 class="section-title">Latest Products</h2>
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <a href="product-vitamin-c-serum.html" class="product-card">
+                        <span class="badge-new">NEW</span>
+                        <img src="img/White Green Minimalist New Serum Skincare Beauty Product Instagram Post (1).png" alt="Vitamin C Serum">
+                        <h3>Vitamin C Brightening Serum</h3>
+                        <div class="product-price">PKR 2,800</div>
+                        <ul>
+                            <li>Brightens and evens skin tone</li>
+                            <li>Reduces dark spots</li>
+                            <li>Anti-aging properties</li>
+                            <li>Boosts collagen production</li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="product-face-wash.html" class="product-card">
+                        <span class="badge-new">NEW</span>
+                        <img src="img/Beige and Brown Minimalist Skincare Product Instagram Post.png" alt="Gentle Face Wash">
+                        <h3>Gentle Cleansing Face Wash</h3>
+                        <div class="product-price">PKR 1,500</div>
+                        <ul>
+                            <li>Deeply cleanses pores</li>
+                            <li>Removes makeup & impurities</li>
+                            <li>Gentle for all skin types</li>
+                            <li>Maintains skin's pH balance</li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="product-sunscreen.html" class="product-card">
+                        <span class="badge-new">NEW</span>
+                        <img src="img/Green and White Minimalist New Product Skincare Instagram Post.png" alt="Sunscreen">
+                        <h3>SPF 50+ Sunscreen Lotion</h3>
+                        <div class="product-price">PKR 2,200</div>
+                        <ul>
+                            <li>Broad spectrum SPF 50+</li>
+                            <li>Water-resistant formula</li>
+                            <li>Protects from UVA/UVB rays</li>
+                            <li>Lightweight, non-greasy</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="products.html" style="background: linear-gradient(135deg, #8B6F47 0%, #6a4545 100%); color: white; padding: 15px 40px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: transform 0.3s ease;">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>HB Skincare Heaven</h5>
+                    <p>Glow naturally with our handcrafted skincare products. Made with love in Pakistan 🇵🇰</p>
+                    <p>Premium natural ingredients for healthy, radiant skin.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="order.html">Place Order</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>📧 Email: <a href="mailto:support@hbskincare.com">support@hbskincare.com</a></p>
+                    <p>📱 Phone: <a href="tel:+923001234567">+92 300 1234567</a></p>
+                    <p>📷 Instagram: @hbskincareheaven</p>
+                </div>
+            </div>
+            <hr style="background: rgba(255,255,255,0.3); margin: 30px 0;">
+            <p class="text-center mb-0">&copy; 2025 HB Skincare Heaven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
